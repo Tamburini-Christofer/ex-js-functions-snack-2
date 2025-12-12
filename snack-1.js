@@ -11,3 +11,4 @@ const somma = (num1, num2) => {
 //Questa è una funzione anonima assegnata a una variabile su una sola riga
 const somma = (num1, num2) => num1 + num2;
 
+
