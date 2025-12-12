@@ -3,16 +3,11 @@
 // Ogni operazione deve essere eseguita in sequenza con un ritardo uguale al tempo di intervallo.
 
 function sequenzaOperazioni(operazioni, intervallo) {
-  let index = 0;
-
-  const timer = setInterval(() => {
-    operazioni[index]();
-    index++;
-
-    if (index === operazioni.length) {
-      clearInterval(timer);
-    }
-  }, intervallo);
+    operazioni.forEach((operazione,index){
+        setTimeout(()=>{
+            operazione();
+        },intervallo * index)
+    })
 }
 
 sequenzaOperazioni([
